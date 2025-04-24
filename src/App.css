@@ -1,0 +1,122 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.from-currency-box, .to-currency-box {
+  padding: 15px;
+  background: #fff;
+  border-radius: 15px;
+}
+.input-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.exchange-currency {  
+  border: 1px solid #fff;
+  width: 40%;
+  margin: 15px auto;
+}
+.from-currency-box {
+  color: #000;
+}
+.input-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background-color: #fff;
+  max-width: 200px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-box input[type="text"] {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: transparent;
+  color: #333;
+}
+
+.input-box:focus-within {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+.select-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background-color: #fff;
+  max-width: 200px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.select-box select {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: transparent;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 24px; /* Space for custom arrow */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%201L6%206.5L11%201%22%20stroke%3D%22%23333%22%20stroke-width%3D%222%22%20/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px 8px;
+  cursor: pointer;
+}
+
+.select-box:focus-within {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
