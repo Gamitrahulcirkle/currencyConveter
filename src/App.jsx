@@ -18,9 +18,13 @@ function App() {
         
   },[])
 
-  useEffect(()=>{
-    setAmount( data[form] );
-  });
+  useEffect(() => {
+    if (data[form] && amount === 0) {
+      setAmount(data[form]);
+    }
+    convert()
+  }, [data, form]);
+  
   
   useEffect(()=>{
     setConvertedAmount( data[to] );
@@ -45,6 +49,11 @@ function App() {
     setForm(to)
     setTo(form)
   }
+
+  const onAmountChange = (value) => {
+    setAmount(value)
+  }
+
   return (
     <>
       <h2>Currency Converter</h2>
@@ -67,7 +76,7 @@ function App() {
                 </select>
               </div>
               <div className='input-box'>
-                <input type='text' name='from' value={amount} onChange={(e)=>{}}/>
+                <input type='text' name='from' value={amount} onChange={(e)=>{ onAmountChange(Number(e.target.value)) } }/>
               </div>
             </div>
           </div>
@@ -86,7 +95,7 @@ function App() {
                 </select>
               </div>
               <div className='input-box'>
-                <input type='text' name='from' value={convertedAmount} onChange={(e)=>{}}/>
+                <input type='text' name='from' value={convertedAmount} disabled/>
               </div>
             </div>
           </div>
